@@ -1,0 +1,172 @@
+html,body,address,blockquote,div,
+form,fieldset,caption,
+h1,h2,h3,h4,h5,h6,
+hr,ul,li,ol,ul,dl,dt,dd,
+table,tr,td,th,p,img,iframe {
+	/*
+		Some HTML elements have predefined margins, paddings and borders so we want 
+		to default them all to 0 in order to have mroe control over the way we display our page.
+	*/
+	margin:0;
+	padding:0;
+}
+
+img, fieldset {
+	border:none;
+}
+
+hr {
+	/*
+		display:none means the element wont be displayed. 
+		We want to use those in order to seperate content and don't want to display them to the user.
+	*/
+	display:none;
+}
+
+@media (max-width:480px) {
+	/*
+		This is a fix for smaller screens to prevent automatic adjustments of our content.
+	*/
+	* {
+		-webkit-text-size-adjust:none;
+		-ms-text-size-adjust:none;
+	}
+}
+
+html, body {
+	/* 
+		This section adjusts our page height to the full screen height of the user.
+		It is used in order to adjust our content to the page height.
+	*/
+	height:100%;
+}
+
+body, button, input, select, table, textarea {
+	/*
+		This section defines the font we want to use to present our content.
+	*/
+	font:normal 100%/150% 'Roboto',sans-serif;
+}
+
+body {
+	/*
+		Define the page body as 100% minimum height.
+	*/
+	display:grid;
+	grid-template-rows:auto 1fr;
+}
+
+ul {
+	list-style: none;
+}
+
+ol {
+	margin: 1.5em;
+}
+
+h1 {
+	margin-top: 2em;
+	margin-bottom: 1em;
+	letter-spacing: 3px;
+	font-size: 2.5em;
+}
+
+img {
+	max-width: 100%;
+}
+
+p {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+#startButton {
+  background-image: url("relationships.png");
+  -webkit-border-radius: 60;
+  -moz-border-radius: 60;
+  border-radius: 60px;
+  -webkit-box-shadow: 0px 1px 3px #666666;
+  -moz-box-shadow: 0px 1px 3px #666666;
+  box-shadow: 0px 1px 3px #666666;
+  font-family: Courier New;
+  color: #f6f6f6;
+  font-size: 20px;
+  padding: 20px 20px 20px 20px;
+  text-decoration: none;
+  outline: none;
+  transition: 0.5s;
+}
+
+#startButton:hover {
+  background: #f6f6f6;
+  color: black;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.postTemplate {
+	max-width: 47em;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	line-height: 2em;
+	padding: 2em;
+	letter-spacing: 1px;
+}
+
+.menu {
+	display: flex;
+	background-color: black;
+}
+
+.menuItem {
+	padding-bottom: 5px;
+	padding-top: 10px;
+	padding-right: 1em;
+	padding-left: 1em;
+	background-color: black;
+	transition: 0.5s;
+	color: white;
+}
+
+.menuItem:hover {
+	background-color: #fff;
+	color: black;
+}
+
+.logo {
+	max-height: 2em;
+	margin-top: 5px;
+	border-bottom: 1px solid grey;
+	border-radius: 1em;
+}
+
+#about {
+	max-width: 30em;
+}
+
+.slogan {
+	margin-top: 0px;
+	font-size: 0.7em;
+}
+
+.footer {
+	text-align: center;
+	background-color: black;
+	color: white;
+}
+
+@media (max-width: 729px) {
+	h1 {
+		margin-top: 0px;
+		font-size: 2em;
+	}
+	.menu {
+		display: block;
+		max-width: 100%;
+		text-align: center;
+	}
+	.menuItem {
+		display: none;
+	}
+}
